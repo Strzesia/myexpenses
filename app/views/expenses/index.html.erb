@@ -1,0 +1,36 @@
+<div class="title row">
+  <div class="inline-flex">
+    <h1 class="col-sm-3">
+      Expenses
+    </h1>
+
+    <div class="date-input col-sm-2">
+      <%= select_month(Date.today.month, {}, {class: 'select-date form-control form-control-sm'}) %>
+    </div>
+
+    <div class="date-input col-sm-2">
+      <%= select_year(Date.today, {start_year: 2019, :end_year => Date.today.year}, {class: 'select-date form-control form-control-sm'}) %>
+    </div>
+
+    <span class="col-sm-offset-3">
+      <%= link_to 'New Expense', new_expense_path, class: 'btn btn-lg btn-success' %>
+    </span>
+
+  </div>
+</div>
+
+
+<div class="inline-flex row">
+  <div class="col-lg-9" id="expenses-table"></div>
+
+  <div class="col-lg-3" id="chart">
+    <%= column_chart Expense.group(:date).sum(:amount),
+                     curve: false,
+                     decimal: ',',
+                     colors: %w(#b00 #666),
+                     width: "300px",
+                     height: "300px",
+                     stacked: true,
+                     discrete: true %>
+  </div>
+</div>

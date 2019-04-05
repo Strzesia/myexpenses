@@ -1,0 +1,79 @@
+  <div class="row">
+    <div class="panel panel-default">
+      <table class="table table-fixed">
+
+        <thead>
+        <tr>
+          <th class="col-xs-2">Amount</th>
+          <th class="col-xs-2">Date</th>
+          <th class="col-xs-2">Category</th>
+          <th class="col-xs-4">Description</th>
+          <th class="col-xs-2"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @expenses.each do |expense| %>
+          <tr>
+            <td class="col-xs-2"><%= number_to_currency(expense.amount, precision: 2) %></td>
+            <td class="col-xs-2"><%= expense.date.strftime("%d.%m.%Y") %></td>
+            <td class="col-xs-2"><%= expense.category.name %></td>
+            <td class="col-xs-4"><%= expense.description %></td>
+            <td class="col-xs-2 btn-group">
+              <%= link_to '', expense, class: 'btn btn-sm btn-success btn-outline fa fa-plus' %>
+              <%= link_to '', edit_expense_path(expense), class: 'btn btn-sm btn-primary btn-outline fa fa-edit' %>
+              <%= link_to '', expense, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-sm btn-danger btn-outline fa fa-trash' %>
+            </td>
+          </tr>
+
+        <% end %>
+        </tbody>
+
+        <tfoot>
+        <tr>
+          <th class="col-xs-2">
+            <p>
+              <b>Sum: </b>
+            </p>
+            <p>
+              <%= number_to_currency(Expense.sum(:amount), precision: 2) %>
+            </p>
+          </th>
+          <th class="col-xs-2">
+            <p>
+              <b>Period: </b>
+            </p>
+            <p>
+              <%= "#{@start_date.strftime('%B')}" %>
+            </p>
+          </th>
+          <th class="col-xs-2">
+            <p>
+              <b>Category: </b>
+            </p>
+            <p>
+              *category*
+            </p>
+          </th>
+          <th class="col-xs-4">
+            <p>
+              <b>Search by: </b>
+            </p>
+            <p>
+              *keyword*
+            </p>
+          </th>
+          <th class="col-xs-2">
+            <p>
+              <b>Edit filter: </b>
+            </p>
+            <p>
+              *miejsce na popup*
+            </p>
+          </th>
+        </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>

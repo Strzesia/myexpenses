@@ -1,0 +1,89 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+body {
+  padding-top: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+.datepicker-dropdown {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+.btn {
+  color: black !important;
+}
+
+.text-right {
+  text-align: right;
+  width: fit-content;
+}
+
+.right {
+  float: right;
+}
+
+.title {
+  h1 {
+    margin: 0;
+  }
+  margin-bottom: 40px;
+  .inline-flex {
+    align-content: center;
+  }
+}
+
+.content {
+  margin: 0 25%;
+}
+
+.inline-flex {
+  display: inline-flex;
+  align-items: flex-end;
+  vertical-align: bottom;
+  width: 100%;
+}
+
+table {
+  min-width: 853px;
+}
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tfoot {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 330px;
+  overflow-y: auto;
+  width: 100%;
+  border-bottom: #666666 solid 2px !important;
+  border-top: #666666 solid 2px !important;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tfoot, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td {
+  float: left;
+  border-bottom-width: 0;
+}
+.table-fixed thead > tr> th, .table-fixed tfoot > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+td, th {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  align-content: center !important;
+}
+

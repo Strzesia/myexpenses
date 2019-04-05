@@ -1,0 +1,17 @@
+<p>
+  <strong>Amount:</strong>
+  <%= number_to_currency(@expense.amount, precision: 2) %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @expense.date.strftime("%d.%m.%Y") %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expense.description %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>
