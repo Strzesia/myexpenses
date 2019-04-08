@@ -54,6 +54,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: MyExpenses_production
-  username: MyExpenses
+  database: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['MYEXPENSES_DATABASE_USER'] %>
   password: <%= ENV['MYEXPENSES_DATABASE_PASSWORD'] %>
