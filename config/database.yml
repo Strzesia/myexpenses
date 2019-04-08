@@ -57,3 +57,4 @@ production:
   database: <%= ENV['DATABASE_URL'] %>
   username: <%= ENV['MYEXPENSES_DATABASE_USER'] %>
   password: <%= ENV['MYEXPENSES_DATABASE_PASSWORD'] %>
+  port: <%= ENV['MYEXPENSES_DATABASE_PORT'] %>
