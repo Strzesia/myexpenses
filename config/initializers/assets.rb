@@ -22,4 +22,5 @@ bootstrap.min.js
 toastr.min.css
 toastr.min.js
 sweetalert2.all.min.js
+popper.js
 )
