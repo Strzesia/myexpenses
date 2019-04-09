@@ -19,7 +19,7 @@ jquery_ujs.js
 jquery-ui.js
 jquery-ui.css
 bootstrap.min.js
-toastr.min.css
+toastr.css
 toastr.min.js
 sweetalert2.all.min.js
 popper.js

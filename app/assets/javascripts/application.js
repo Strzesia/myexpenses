@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require activestorage
-//= require jquery
 //= require jquery3
+//= require popper
 //= require jquery_ujs
 //= require jquery-ui
 //= require expenses
@@ -21,7 +21,7 @@
 //= require bootstrap-datepicker
 //= require Chart.bundle
 //= require chartkick
-//= require toastr.min
+//= require toastr.min.js
 //= require_tree .
 
 toastr.options = {
@@ -40,4 +40,6 @@ toastr.options = {
     "hideEasing": "swing",
     "showMethod": "slideDown",
     "hideMethod": "fadeUp"
-}
+};
+
+$(document).ready(function() { $(".dropdown-toggle").dropdown(); });
