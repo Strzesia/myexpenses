@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MyExpenses</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>MyExpenses</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= render 'layouts/assets' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true %>
-    <%= stylesheet_link_tag    'toastr.css', media: 'all', 'data-turbolinks-track': true %>
-    <%= stylesheet_link_tag    'jquery-ui.css', media: 'all', 'data-turbolinks-track': true %>
-    <%#= stylesheet_link_tag    'mdb', media: 'all', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'jquery3.js', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'jquery_ujs.js', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'jquery-ui.js', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'popper.js', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'bootstrap.min.js', 'data-turbolinks-track': true %>
-    <%= javascript_include_tag 'toastr.min.js', 'data-turbolinks-track': true %>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-  </head>
-
-  <body>
-    <div class="container">
-      <%= render 'layouts/flash' %>
-      <%= render 'layouts/header' %>
-      <%= yield %>
-    </div>
-      <%= yield :javascript %>
-  </body>
+<body>
+<div class="container">
+  <%= render 'layouts/flash' %>
+  <%= render 'layouts/header' %>
+  <%= yield %>
+</div>
+<%= yield :javascript %>
+</body>
 </html>

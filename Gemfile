@@ -20,8 +20,8 @@ gem 'bootstrap'
 gem 'bootstrap-datepicker-rails'
 gem 'font-awesome-rails'
 gem 'toastrjs-rails'
-gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
-gem 'sweet-alert-confirm'
+# gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
+# gem 'sweet-alert-confirm'
 gem 'chartkick'
 
 

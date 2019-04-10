@@ -13,14 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
-Rails.application.config.assets.precompile += %w(
-jquery3.js
-jquery_ujs.js
-jquery-ui.js
-jquery-ui.css
-bootstrap.min.js
-toastr.css
-toastr.min.js
-sweetalert2.all.min.js
-popper.js
-)
+Rails.application.config.assets.precompile += %w( *.css *.erb *.scss *.js *.coffee *.png *.jpg *.ico *.gif)

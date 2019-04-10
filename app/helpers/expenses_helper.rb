@@ -1,6 +1,6 @@
 module ExpensesHelper
 
-    @pattern = Regexp.new(/^(\[0-9]{1,3})+(\,\[0-9]{2})$/)
+    @pattern = Regexp.new(/^(\[0-9]{1,3})+(\,\[0-9]{2})$/).freeze
 
     def datepicker(form, field)
         form.text_field(field, data: { provide: "datepicker",
@@ -16,4 +16,16 @@ module ExpensesHelper
                         class: 'form-control form-control-sm').html_safe
     end
 
+    def sortable(column, title = nil)
+
+        title ||= column.titleize
+
+        direction = (column == sort_column && sort_direction == "asc") ? "desc" : "asc"
+        css_class = (column == sort_column) ? "current #{sort_direction}" : nil
+
+        icon = sort_direction == "asc" ? "fa fa-sort-up" : "fa fa-sort-down"
+        icon = column == sort_column ? icon : "fa fa-sort"
+
+        "<a class='#{css_class}' onclick='sortColumn(\"#{column}\", \"#{direction}\")'>#{title}<span class='#{icon}'></span></a>".html_safe
+    end
 end
