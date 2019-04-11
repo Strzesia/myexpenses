@@ -1,13 +1,17 @@
 @import "variables";
 
 body {
-  padding-top: 60px;
+  padding: 0;
   background-color: #fff;
   color: #333;
-  margin: 33px;
+  margin: 0;
   font-family: helvetica, arial, verdana, sans-serif;
   font-size: 15px;
   line-height: 18px;
+}
+
+.page-body {
+  padding-top: 80px;
 }
 
 p, ol, ul, td {
