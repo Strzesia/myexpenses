@@ -8,9 +8,9 @@
 </head>
 
 <body>
-<div class="page-body">
+<%= render 'layouts/header' %>
+<div class="container page-body">
   <%= render 'layouts/flash' %>
-  <%= render 'layouts/header' %>
   <%= yield %>
 </div>
 <%= yield :javascript %>
