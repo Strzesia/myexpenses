@@ -1,11 +1,30 @@
 @import "bootstrap";
-
-body {
-  padding-top: 50px;
-}
+@import "variables";
 
 textarea {
   resize: none;
+}
+
+.navbar {
+  background: $desert-sand;
+
+  #add-expense {
+    border-radius: 0.25rem;
+    background-color: $green-light;
+    &:hover {
+      color: black;
+      background-color: $green-dark;
+    }
+  }
+
+  .nav-link {
+    font-size: 1.25em !important;
+    text-decoration: none !important;
+
+    &:hover:not(.dropdown-toggle):not(#add-expense) {
+      color: $ruby-red;
+    }
+  }
 }
 
 .navbar-collapse {
@@ -14,9 +33,13 @@ textarea {
   flex-grow: 0;
 }
 
-.datepicker-dropdown {
-  margin-top: 40px;
-  margin-left: 40px;
+.datepicker-days, .datepicker table, .datepicker-inline {
+  width: 100% !important;
+}
+
+#mydatepicker {
+  border-radius: 0.2rem;
+  border: 1px solid #ced4da;
 }
 
 #logo {
@@ -38,9 +61,13 @@ textarea {
 
 .title {
   h1 {
-    margin: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Raleway", helvetica, arial, verdana, sans-serif;;
   }
+
   margin-bottom: 40px;
+
   .inline-flex {
     align-content: center;
   }
@@ -57,16 +84,18 @@ textarea {
   width: 100%;
 }
 
-table {
+#expenses-table {
   min-width: 853px;
 }
 
 .table-fixed thead {
   width: 97%;
 }
+
 .table-fixed tfoot {
   width: 97%;
 }
+
 .table-fixed tbody {
   height: 330px;
   overflow-y: auto;
@@ -74,17 +103,21 @@ table {
   border-bottom: #666666 solid 2px !important;
   border-top: #666666 solid 2px !important;
 }
+
 .table-fixed thead, .table-fixed tbody, .table-fixed tfoot, .table-fixed tr, .table-fixed td, .table-fixed th {
   display: block;
 }
+
 .table-fixed tbody td {
   float: left;
   border-bottom-width: 0;
 }
-.table-fixed thead > tr> th, .table-fixed tfoot > tr> th {
+
+.table-fixed thead > tr > th, .table-fixed tfoot > tr > th {
   float: left;
   border-bottom-width: 0;
 }
+
 td, th {
   display: table-cell !important;
   vertical-align: middle !important;

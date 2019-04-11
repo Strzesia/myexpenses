@@ -23,6 +23,7 @@ gem 'toastrjs-rails'
 # gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
 # gem 'sweet-alert-confirm'
 gem 'chartkick'
+gem 'mdbootstrap-rails'
 
 
 gem 'rails-i18n'

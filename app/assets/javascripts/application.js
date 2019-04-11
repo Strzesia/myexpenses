@@ -42,4 +42,6 @@ toastr.options = {
     "hideMethod": "fadeUp"
 };
 
-$(document).ready(function() { $(".dropdown-toggle").dropdown(); });
+$(document).on('turbolinks:load', function () {
+    $(".dropdown-toggle").dropdown();
+});

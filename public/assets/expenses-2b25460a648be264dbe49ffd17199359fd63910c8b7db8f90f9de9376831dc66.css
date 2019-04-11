@@ -1,0 +1,19 @@
+/*
+.input-group {
+  width: fit-content !important;
+  .input-group-addon {
+    margin: 0;
+    padding: 0;
+  }
+}*/
+/* line 15, app/assets/stylesheets/expenses.scss */
+.filter {
+  width: 200px;
+}
+
+/* line 19, app/assets/stylesheets/expenses.scss */
+th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}

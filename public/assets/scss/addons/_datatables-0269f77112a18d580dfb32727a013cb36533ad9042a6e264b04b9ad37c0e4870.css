@@ -1,0 +1,207 @@
+/*
+ * MDBootstrap integration with Datatables
+ * Learn more: https://mdbootstrap.com/docs/jquery/tables/datatables/
+ * About MDBootstrap: https://mdbootstrap.com/
+ *
+ * This combined file was created by the DataTables downloader builder:
+ *   https://datatables.net/download
+ *
+ * To rebuild or modify this file with the latest versions of the included
+ * software please visit:
+ *   https://datatables.net/download/#bs4/dt-1.10.18
+ *
+ * Included libraries:
+ *   DataTables 1.10.18
+ */
+/* line 18, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead {
+  cursor: pointer;
+}
+
+/* line 21, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead > tr > th:active, table.dataTable thead > tr > td:active {
+  outline: none;
+}
+
+/* line 30, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_length.d-flex.flex-row label {
+  margin-top: 1.2rem;
+  margin-right: 1rem;
+}
+
+/* line 35, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_length.d-flex.flex-row .select-wrapper.mdb-select span, div.dataTables_wrapper div.dataTables_length.d-flex.flex-row .select-wrapper.mdb-select .select-dropdown {
+  margin-top: 1rem;
+}
+
+/* line 40, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_length label {
+  text-align: left;
+  font-weight: normal;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* line 47, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_filter label {
+  text-align: left;
+  font-weight: normal;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* line 54, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_length select, div.dataTables_wrapper div.dataTables_length input {
+  width: auto;
+}
+
+/* line 58, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+
+/* line 59, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_filter select {
+  width: auto;
+}
+
+/* line 62, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_filter input {
+  width: auto;
+  margin-left: .5rem;
+  display: inline-block;
+}
+
+/* line 69, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_info {
+  font-weight: normal;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* line 74, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_paginate {
+  font-weight: normal;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: right;
+  margin: 0;
+}
+
+/* line 80, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  justify-content: flex-end;
+}
+
+/* line 86, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item.active .page-link:focus {
+  background-color: #4285f4;
+}
+
+/* line 89, vendor/assets/MDB/scss/addons/_datatables.scss */
+div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item .page-link:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  /* line 100, vendor/assets/MDB/scss/addons/_datatables.scss */
+  div.dataTables_wrapper div .dataTables_length, div.dataTables_wrapper div .dataTables_filter, div.dataTables_wrapper div .dataTables_info, div.dataTables_wrapper div .dataTables_paginate ul.pagination {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* line 110, vendor/assets/MDB/scss/addons/_datatables.scss */
+.bs-select select {
+  display: inline-block !important;
+}
+
+/* line 117, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting {
+  padding-right: 30px;
+}
+
+/* line 122, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting {
+  padding-right: 30px;
+}
+
+/* line 126, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead > tr > th:active, table.dataTable thead > tr > td:active {
+  outline: none;
+}
+
+/* line 130, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 135, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+
+/* line 143, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+
+/* line 151, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+
+/* line 159, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+
+/* line 167, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 0.9em;
+  display: block;
+  opacity: 0.3;
+}
+
+/* line 174, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+  right: 1em;
+  content: "\f0de";
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+/* line 181, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: "\f0dd";
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  right: 16px;
+  font-size: 1rem;
+}
+
+/* line 189, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:after {
+  opacity: 1;
+}
+
+/* line 192, vendor/assets/MDB/scss/addons/_datatables.scss */
+table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+  opacity: 0;
+}

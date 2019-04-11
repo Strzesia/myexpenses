@@ -1,45 +1,62 @@
-<%= form_with(model: expense, local: true) do |e| %>
-  <% if expense.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+<div>
+  <%= form_with(model: expense, local: true) do |e| %>
+    <% if expense.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
 
-      <ul>
-        <% expense.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% expense.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field row form-group">
+      <%= e.label :amount, class: 'col-md-3 col-form-label' %>
+      <%= e.text_field :amount,
+                       value: number_with_precision(e.object.amount, precision: 2),
+                       autocomplete: 'off',
+                       pattern: "[0-9]+([,][0-9]{2})",
+                       oninvalid: "setCustomValidity('Number should be in format 123,45');",
+                       class: 'form-control form-control-sm col-md-9' %>
     </div>
+
+    <div class="field row form-group">
+      <%= e.label :category, class: 'col-md-3 col-form-label' %>
+      <%= e.select :category_id,
+                   options_from_collection_for_select(Category.where(user: current_user), :id, :name),
+                   {},
+                   class: 'custom-select custom-select-sm col-md-9' %>
+    </div>
+
+    <div class="field row form-group" id="date">
+      <%= e.label :date, class: 'col-md-3 col-form-label' %>
+      <div id="mydatepicker" class="col-md-9"></div>
+      <script>
+          $(function() {
+              $('#mydatepicker').datepicker({
+                  format: "dd/mm/yyyy",
+                  weekStart: 1,
+                  maxViewMode: 2,
+                  todayHighlight: true,
+                  todayBtn: 'linked',
+                  clearBtn: 'true',
+                  title: ''
+              });
+              $('.datepicker-title').parent().hide();
+          });
+      </script>
+    </div>
+
+    <div class="field row form-group form-group-sm">
+      <%= e.label :description, class: 'col-md-3 col-form-label' %>
+      <%= e.text_area :description, rows: '5', class: 'form-control form-control-sm col-md-9' %>
+    </div>
+
+    <div class="actions right">
+      <%= e.submit 'Save', class: 'btn btn-green' %>
+    </div>
+
   <% end %>
-
-  <div class="field">
-    <%= e.label :amount %>
-    <%= e.text_field :amount,
-                     value: number_with_precision(e.object.amount, precision: 2),
-                     autocomplete: 'off',
-                     pattern: "[0-9]+([,][0-9]{2})",
-                     oninvalid: "setCustomValidity('Number should be in format 123,45');",
-                     class: 'form-control form-control-sm' %>
-  </div>
-
-  <div class="field">
-    <%= e.label :category %>
-    <%= e.select :category_id,
-                 options_from_collection_for_select(Category.where(user: current_user),:id, :name),
-                 class: 'form-control form-control-sm' %>
-  </div>
-
-  <div class="field" id="date">
-    <%= e.label :date %>
-    <%= datepicker(e, :date) %>
-  </div>
-
-  <div class="field">
-    <%= e.label :description %>
-    <%= e.text_area :description, rows: '5', class: 'form-control form-control-sm' %>
-  </div>
-
-  <div class="actions">
-    <%= e.submit %>
-  </div>
-
-<% end %>
+</div>
