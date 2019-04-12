@@ -1,4 +1,14 @@
-@import "bootstrap";
+@import "bootstrap-sprockets";
+@import "mdb/css/bootstrap";
+@import "mdb/scss/core/variables";
+@import "mdb/scss/core/mixins";
+@import "mdb/scss/core/waves";
+@import "mdb/scss/core/typography";
+@import "mdb/scss/core/masks";
+@import "mdb/scss/core/helpers";
+@import "mdb/scss/core/colors";
+@import "mdb/scss/core/global";
+@import "mdb/css/mdb";
 @import "variables";
 
 textarea {

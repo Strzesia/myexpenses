@@ -5,8 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.json
   def index
-    @categories = Category.where(user: current_user)
-
+    @categories = Category.includes(:user).where(user: current_user)
   end
 
   def load
@@ -17,6 +16,7 @@ class ExpensesController < ApplicationController
     amountTo = params[:amountTo].presence || Expense.maximum(:amount)
     # @categories = Category.where(user: current_user)
     @expenses = Expense
+                    .includes(:category)
                     .where(date: @start_date..@end_date)
                     .where(category_id: params[:category_id])
                     .where('description like ?', "%#{params[:description]}%")

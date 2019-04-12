@@ -1,24 +1,36 @@
-# README
+# MyExpenses-App
+[MyExpenses-App](https://myexpenses-app.herokuapp.com/) 
+- introduction <br>
+![Obrazek](./images/schema.jpg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+##Table of content
+* [General info]()
+* [Technologies]()
+* [Setup]()
+* [Features]()
 
-* Ruby version
 
-* System dependencies
+###General info
+(po co? co robi?)
 
-* Configuration
+###Technologies
+* Ruby 2.5.3
+* Ruby on Rails 5
+* Bootstrap
+* jQuery
+* MySQL (development) / PostgreSQL (production)
+* Heroku
+* Puma
 
-* Database creation
+###Setup
+You can run this app locally. 
+You just need to configure database like in *config/database.yml* and then run from console:
+```
+git clone
+bundle
+rails db:setup
+rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Features

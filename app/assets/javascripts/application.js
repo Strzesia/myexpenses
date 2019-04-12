@@ -18,11 +18,16 @@
 //= require expenses
 //= require turbolinks
 //= require bootstrap
+//= require mdb/js/jquery-3.3.1.min
+//= require mdb/js/popper.min
+//= require mdb/js/bootstrap
+//= require mdb/js/mdb
 //= require bootstrap-datepicker
 //= require Chart.bundle
 //= require chartkick
 //= require toastr.min.js
 //= require_tree .
+
 
 toastr.options = {
     "closeButton": true,

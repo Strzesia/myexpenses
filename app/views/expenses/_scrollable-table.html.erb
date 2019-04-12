@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="panel panel-default">
+    <table class="table table-fixed" id="expenses-table">
+
+      <thead>
+      <tr>
+        <th class="col-xs-2"><%= sortable("amount") %></th>
+        <th class="col-xs-2"><%= sortable("date") %></th>
+        <th class="col-xs-2"><%= sortable("category") %></th>
+        <th class="col-xs-4">Description</th>
+        <th class="col-xs-2"></th>
+      </tr>
+      </thead>
+
+      <tbody id="expenses-body"></tbody>
+
+      <tfoot>
+      <tr>
+        <th class="col-xs-2">
+          <%= text_field_tag "amount1", "", placeholder: 'from',
+                             autocomplete: 'off',
+                             class: 'form-control input-sm' %>
+          <%= text_field_tag "amount2", "", placeholder: 'to',
+                             autocomplete: 'off',
+                             class: 'form-control input-sm' %>
+        </th>
+        <th class="col-xs-2">
+          <%= select_month(Date.today.month, {}, {class: 'form-control input-sm'}) %>
+          <%= select_year(Date.today, {start_year: 2019, :end_year => Date.today.year}, {class: 'form-control input-sm'}) %>
+        </th>
+        <th class="col-xs-2">
+          <%= select_tag "category", options_from_collection_for_select(@categories, :id, :name), class: 'form-control input-sm' %>
+        </th>
+        <th class="col-xs-4">
+          <%= text_field_tag "keyword", '', class: 'form-control input-sm' %>
+        </th>
+        <th class="col-xs-2">
+          <button type="submit" class="filter-expenses btn btn-green">Search</button>
+        </th>
+      </tr>
+      </tfoot>
+
+    </table>
+  </div>
+</div>
